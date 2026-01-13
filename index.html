@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Wonderful World of Hamsters</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffb375",
+                        "background-light": "#fdfaf7",
+                        "background-dark": "#23180f",
+                        "card-light": "#ffffff",
+                        "card-dark": "#2d2015",
+                        "accent-yellow": "#fce4a8",
+                        "accent-mint": "#d1f2e9",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto auto;
+            gap: 1.5rem;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 25px -5px rgba(255, 179, 117, 0.1), 0 8px 10px -6px rgba(255, 179, 117, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#181410] dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#f5f2f0] dark:border-white/10">
+<div class="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">pets</span>
+</div>
+<h1 class="text-xl font-extrabold tracking-tight">Hamster Haven</h1>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Care Tips</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Diet</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Fun Facts</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Habitat</a>
+</nav>
+<button class="bg-primary hover:bg-primary/90 text-[#181410] px-6 py-2.5 rounded-xl font-bold text-sm transition-all shadow-sm">
+                    Adopt a Hamster
+                </button>
+</div>
+</header>
+<main class="flex-1 w-full max-w-[1200px] mx-auto px-6 py-8">
+<!-- Hero Section -->
+<section class="mb-12">
+<div class="relative w-full aspect-[21/9] rounded-xl overflow-hidden soft-shadow">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Golden hamster running enthusiastically in an orange wheel" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCN7SKP1Ie-qgomOJaUrgqsKvXe1c1ylS-cUdLiGNeQetnS_0V4jvNMVF5XMAAK3GSIaitqfj9kMs4w0kmv6B4GPiUYwCBYxiJsYXxZQv87DPkuu5ze_QQPH3C6sV6LWxD_VyioJPQCaN2x02o55V5rQJdNkmN8bWYExXVvkq--9PHq_cC-GSkhFNC6_kNyfnysJuZr-Yl8tzEd0S3Veriipo5LVqBRdMY32sZzs29dN3KqD1sAtRF0f3JmqlFvFKR5VyeAm0_hiKyU');"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+<h1 class="text-white text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-[1.1]">
+                            The Wonderful World <br/> of Hamsters
+                        </h1>
+<p class="text-white/90 text-lg md:text-xl max-w-2xl font-medium mb-8">
+                            Discover the joy of caring for your tiny, furry companions with our fun and educational guide.
+                        </p>
+<button class="bg-primary text-[#181410] px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2">
+<span class="material-symbols-outlined">auto_stories</span>
+                            Explore Care Guide
+                        </button>
+</div>
+</div>
+</section>
+<!-- Section Title -->
+<div class="mb-8">
+<h2 class="text-3xl font-extrabold tracking-tight text-center md:text-left">Hamster Life at a Glance</h2>
+<div class="h-1.5 w-20 bg-primary rounded-full mt-2 mx-auto md:mx-0"></div>
+</div>
+<!-- Bento-Style Info Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+<!-- Large Card: Nesting -->
+<div class="md:col-span-2 bg-card-light dark:bg-card-dark p-8 rounded-xl soft-shadow border border-primary/10 group">
+<div class="flex flex-col h-full">
+<div class="w-full h-48 rounded-lg overflow-hidden mb-6">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Hamster peeking out of a soft cotton bedding nest" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBe9ZPPqn8gYY9bvvH-q6xlXtZRIFvpLJDU1CH36dKhCR7dv2ERdOhKlJ3xhYEmByOQl7mQGPisazQBXwn0bE1u0i3293pIlnmaOm1geuI-rgj-CMu1yTFCxMsMGOAd7JjPh-zTYIoDWHj5oOqj8Rn9eQHCYsU7OEYAA6vyUxxSfXaqEwmFf9E6udgE1NyDpmdVJJ7pHTHqOZQaE9f8z6Yo4_c7Cd-PmngUTuj0pNMhDlnwudpiQWZGDdrBDVH5Wir5E_dRLTut-PQY');"></div>
+</div>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary">bed</span>
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Sleep &amp; Comfort</span>
+</div>
+<h3 class="text-2xl font-extrabold mb-3">The Cozy Nest</h3>
+<p class="text-[#8d735e] dark:text-gray-400 mb-6 leading-relaxed">
+                            Hamsters are burrowers by nature. Providing at least 6 inches of soft, safe bedding allows them to create intricate tunnel systems and a warm sleeping nook.
+                        </p>
+<div class="mt-auto">
+<button class="text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all text-primary">
+                                Read more about habitats <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Nibble Card: Hydration -->
+<div class="bg-accent-mint/30 dark:bg-accent-mint/10 p-8 rounded-xl flex flex-col justify-center items-center text-center">
+<div class="size-16 bg-white dark:bg-card-dark rounded-full flex items-center justify-center mb-6 soft-shadow">
+<span class="material-symbols-outlined text-teal-600 text-3xl">water_drop</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Hydration Station</h3>
+<p class="text-sm text-[#8d735e] dark:text-gray-400 font-medium">Fresh water daily in a drip-free bottle is essential for a happy hammy.</p>
+</div>
+<!-- Nibble Card: Pouches -->
+<div class="bg-accent-yellow/40 dark:bg-accent-yellow/10 p-8 rounded-xl flex flex-col justify-center items-center text-center">
+<div class="size-16 bg-white dark:bg-card-dark rounded-full flex items-center justify-center mb-6 soft-shadow">
+<span class="material-symbols-outlined text-amber-600 text-3xl">restaurant</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Pouch Power</h3>
+<p class="text-sm text-[#8d735e] dark:text-gray-400 font-medium">Their cheek pouches can expand to hold a food stash as large as their head!</p>
+</div>
+<!-- Fact Nibble Card -->
+<div class="bg-primary/20 p-8 rounded-xl border-2 border-dashed border-primary/40 flex flex-col justify-center items-start">
+<span class="bg-primary text-[#181410] px-2 py-0.5 rounded-md text-[10px] font-black uppercase mb-4">Did You Know?</span>
+<p class="text-lg font-bold leading-snug">Hamsters are crepuscular, meaning they are most active during twilight hours!</p>
+</div>
+<!-- Medium Card: Adventure -->
+<div class="md:col-span-2 bg-card-light dark:bg-card-dark p-8 rounded-xl soft-shadow border border-primary/10 group">
+<div class="flex flex-col md:flex-row gap-6 h-full items-center">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary">explore</span>
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Activity</span>
+</div>
+<h3 class="text-2xl font-extrabold mb-3">Adventure Time</h3>
+<p class="text-[#8d735e] dark:text-gray-400 mb-4 leading-relaxed">
+                                Exploration keeps their minds sharp. Safe time in an exercise ball or a secured playpen is vital for their physical health.
+                            </p>
+<button class="bg-[#181410] text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-gray-800 transition-colors">Safety Checklist</button>
+</div>
+<div class="w-full md:w-1/2 aspect-square rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Small hamster exploring a wooden playground bridge" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQjZNCYy5TF06PC6wvGAC_t89kDITDJnPFwve_SGMTCfCcFPb_Wc78nvHbbm0r1qb87dVSc96eDOMK6wY-TNH8fZHf74yEBuXzRmiAtbGir8Ihgq9ivEnEmyRS6j7qrxOCm-9ptmTL8GxmI_lE28xsBk8Bq9Jcj7a0WJOez_NBqCAFlFkBydojLBxACXpFtyGSK56JBSsyuAP5V1KWWUs_Y_yygbGW19-vvMFFAkWNhFa7rPe5c5Sq2z6ugZoXheeu8JCexVMnSTAc');"></div>
+</div>
+</div>
+</div>
+<!-- Small Card: Grooming -->
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-xl soft-shadow flex flex-col justify-center border border-primary/5">
+<span class="material-symbols-outlined text-primary mb-2">spa</span>
+<h4 class="font-bold">Sand Baths</h4>
+<p class="text-xs text-gray-500">A bowl of chinchilla sand helps keep their fur oil-free.</p>
+</div>
+</div>
+<!-- Care Nibbles Section Header -->
+<section class="mb-12">
+<div class="bg-primary/5 dark:bg-primary/5 rounded-3xl p-10 flex flex-col md:flex-row items-center gap-10">
+<div class="flex-1">
+<h2 class="text-4xl font-extrabold mb-4">Hamster Care Nibbles</h2>
+<p class="text-lg text-[#8d735e] dark:text-gray-300 mb-8">Quick tips to ensure your tiny friend lives their best, most comfortable life.</p>
+<div class="space-y-4">
+<div class="flex items-start gap-4 p-4 bg-white dark:bg-card-dark rounded-xl soft-shadow">
+<div class="size-8 bg-accent-yellow rounded-full flex-shrink-0 flex items-center justify-center text-[#181410]">
+<span class="material-symbols-outlined text-xl">check</span>
+</div>
+<div>
+<h4 class="font-bold">Cleanliness is Key</h4>
+<p class="text-sm text-gray-500">Spot clean the cage daily and do a deep clean every two weeks.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-white dark:bg-card-dark rounded-xl soft-shadow">
+<div class="size-8 bg-accent-mint rounded-full flex-shrink-0 flex items-center justify-center text-[#181410]">
+<span class="material-symbols-outlined text-xl">check</span>
+</div>
+<div>
+<h4 class="font-bold">Chew Toys</h4>
+<p class="text-sm text-gray-500">Their teeth never stop growing! Provide wooden blocks or willow sticks.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/3">
+<div class="aspect-[3/4] rounded-2xl bg-cover bg-center soft-shadow rotate-3" data-alt="Close up of a hamster holding a tiny piece of broccoli" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxOeGX7cThi4HuexC42aMDiqnBxZIEAhPnoN2uRpV-PnYedcDA8htl66xT0bGA1gIsstSGuZPGw825X8l9i4c5XSzv5cwesI8HLNhIfLNtYr3bnjwCkg09YvGZfjwjU1ND6Nl6l4Scz_0HvFUejlH9bdyAjFuUkGu2ZJVNz_jYuZa6VMhrZKZD410MfkcSFdHLPso-zygg8Dm2E8F6MhjoPejU0fB2tLoOrWFhkP5rEtFEM7imxUHnVdN1hneXCjoSuTU4AkQCiqU-');"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-[#f5f2f0] dark:border-white/10 pt-16 pb-8">
+<div class="max-w-[1200px] mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-8 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-lg">pets</span>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight">Hamster Haven</h2>
+</div>
+<p class="text-[#8d735e] dark:text-gray-400 max-w-sm mb-6">
+                            Our mission is to provide every hamster owner with the knowledge they need to create a loving and healthy environment for their tiny friends.
+                        </p>
+<div class="flex gap-4">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary cursor-pointer hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-xl">share</span>
+</div>
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary cursor-pointer hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6">Quick Links</h4>
+<ul class="space-y-4 text-sm text-[#8d735e] dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Adoptable Hamsters</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Care Calculator</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Food Guide</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Vet Finder</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Newsletter</h4>
+<p class="text-xs text-[#8d735e] dark:text-gray-400 mb-4">Get weekly nibbles of hamster wisdom.</p>
+<div class="flex gap-2">
+<input class="bg-background-light dark:bg-card-dark border-none rounded-lg text-sm px-4 flex-1 focus:ring-primary" placeholder="Email" type="email"/>
+<button class="bg-primary p-2 rounded-lg">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-[#f5f2f0] dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-[#8d735e] dark:text-gray-400">© 2024 Hamster Haven. Made with sunflower seeds.</p>
+<div class="flex gap-8 text-xs font-bold">
+<a class="hover:underline" href="#">Privacy Policy</a>
+<a class="hover:underline" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
